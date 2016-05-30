@@ -19,7 +19,6 @@ bot.on('inline_query', function(message) {
   let text = encodeURIComponent(message.query);
   if(text) {
     let results = [];
-    let people = ['ben', 'ryan', 'seren', 'ruth', 'dan', 'pete'];
     for(let person of people) {
       results.push({
         type: 'photo',
