@@ -5,7 +5,7 @@ const bot = new telegram(process.env.TOKEN, { polling: true });
 
 let people = [];
 
-http.get('http://says.marcusnoble.co.uk/people', (res) => {
+http.get('https://says.marcusnoble.co.uk/people', (res) => {
   let inputStream = '';
   res.on('data', (chunk) => {
     inputStream += chunk;
@@ -23,8 +23,8 @@ bot.on('inline_query', function(message) {
       results.push({
         type: 'photo',
         id: `${person}/${text}`,
-        photo_url: `http://says.marcusnoble.co.uk/${person}/${text}`,
-        thumb_url: `http://says.marcusnoble.co.uk/${person}/${text}`
+        photo_url: `https://says.marcusnoble.co.uk/${person}/${text}`,
+        thumb_url: `https://says.marcusnoble.co.uk/${person}/${text}`
       });
     }
     bot.answerInlineQuery(message.id, results);
