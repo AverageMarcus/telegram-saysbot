@@ -1,11 +1,11 @@
 "use strict";
-const http = require('http');
+const https = require('https');
 const telegram = require('node-telegram-bot-api');
 const bot = new telegram(process.env.TOKEN, { polling: true });
 
 let people = [];
 
-http.get('https://says.marcusnoble.co.uk/people', (res) => {
+https.get('https://says.marcusnoble.co.uk/people', (res) => {
   let inputStream = '';
   res.on('data', (chunk) => {
     inputStream += chunk;
