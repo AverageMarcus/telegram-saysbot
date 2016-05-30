@@ -1,0 +1,13 @@
+{
+  "name": "says-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.21.1",
+    "telegram-bot-api": "^1.1.0"
+  }
+}
