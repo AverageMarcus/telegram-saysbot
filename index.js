@@ -24,7 +24,9 @@ bot.on('inline_query', function(message) {
         type: 'photo',
         id: `${person}/${text}`,
         photo_url: `https://says.marcusnoble.co.uk/${person}/${text}`,
-        thumb_url: `https://says.marcusnoble.co.uk/${person}/${text}`
+        thumb_url: `https://says.marcusnoble.co.uk/${person}/${text}`,
+        photo_width: 731,
+        photo_height: 418
       });
     }
     bot.answerInlineQuery(message.id, results);
